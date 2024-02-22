@@ -16,10 +16,6 @@ public:
                 j[l.first]=0;
             }
         }
-        // if(n==2)
-        // {
-        //     return trust[0][1];
-        // }
         if(n==1)return 1;
         int fin=-1;
         for(auto l:j)
