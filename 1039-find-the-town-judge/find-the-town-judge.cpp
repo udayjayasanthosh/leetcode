@@ -2,19 +2,34 @@ class Solution {
 public:
     int findJudge(int n, vector<vector<int>>& trust) {
         // if(trust=={{1,3},{1,4},{2,3}} && n==4)return -1;
-        if(n == 1) return 1;
-        unordered_map<int, vector<int>> mpp;
-        for(auto it : trust) {
-            mpp[it[1]].push_back(it[0]);
+        map<int,int>i;
+        map<int,int>j;
+        for(auto k:trust)
+        {
+            i[k[0]]++;
+            j[k[1]]++;
         }
-        
-        unordered_map<int, int> mpp2;
-        for(auto it : trust) {
-            mpp2[it[0]]++;
+        for(auto l:i)
+        {
+            if(j.find(l.first)!=j.end())
+            {
+                j[l.first]=0;
+            }
         }
-        for(auto it : mpp) {
-            if(it.second.size() == n-1 && mpp2.find(it.first) == mpp2.end()) return it.first; 
+        // if(n==2)
+        // {
+        //     return trust[0][1];
+        // }
+        if(n==1)return 1;
+        int fin=-1;
+        for(auto l:j)
+        {
+            if(l.second==n-1)
+            {
+                fin=l.first;
+                break;
+            }
         }
-        return -1;
-    }
+        return fin;
+    }
 };
