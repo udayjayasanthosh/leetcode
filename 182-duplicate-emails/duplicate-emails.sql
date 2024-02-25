@@ -1,0 +1,1 @@
+select distinct p.email from person p,person p2 where p.id<>p2.id and p.email=p2.email
