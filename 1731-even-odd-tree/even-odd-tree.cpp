@@ -56,7 +56,9 @@ public:
             }
             mp[i]=root->val;
         }
+        if(root->left!=NULL)
         fun(root->left,i+1);
+        if(root->right!=NULL)
         fun(root->right,i+1);
     }
     bool isEvenOddTree(TreeNode* root) {
