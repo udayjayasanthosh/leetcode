@@ -12,7 +12,7 @@
 class Solution {
 public:
     int c=1;
-    map<int,int>mp;
+    unordered_map<int,int>mp;
     void fun(TreeNode* root,int i)
     {
         if(root==NULL)return;
