@@ -13,19 +13,19 @@ public:
                 zero++;
             }
         }
-        s="";
+        string sa="";
         ones=ones-1;
             while(ones>0)
             {
-                s=s+'1';
+                sa=sa+'1';
                 ones--;
             }
             while(zero>0)
             {
-                s=s+'0';
+                sa=sa+'0';
                 zero--;
             }
-            s=s+'1';
-            return s;
+            sa+='1';
+            return sa;
     }
 };
