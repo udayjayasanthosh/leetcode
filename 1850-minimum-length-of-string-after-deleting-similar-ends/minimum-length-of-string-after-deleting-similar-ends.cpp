@@ -12,12 +12,12 @@ public:
             while(a==s[i] and i<=j)
             {
                 i++;
-                //cout<<i<<"__"<<endl;
+                cout<<i<<"__"<<endl;
             }
             while(a==s[j] and i<=j)
             {
                 j--;
-                //cout<<j<<"--"<<endl;
+                cout<<j<<"--"<<endl;
             }
             }
             // i++;
