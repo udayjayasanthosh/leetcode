@@ -7,7 +7,6 @@ public:
         vector<int>col0(grid[0].size(),0);
         for(int i=0;i<grid.size();i++)
         {
-            int rowone=0,rowzero=0;
             for(int j=0;j<grid[i].size();j++)
             {
                 if(grid[i][j]==0)
