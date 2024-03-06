@@ -1,12 +1,22 @@
 class Solution {
 public:
     int countGoodRectangles(vector<vector<int>>& rectangles) {
-        vector<int>v;
+        pair<int,int>p;
+        p.first=0;
+        p.second=0;
         for(int i=0;i<rectangles.size();i++)
         {
-            v.push_back(min(rectangles[i][0],rectangles[i][1]));
+            int a=min(rectangles[i][0],rectangles[i][1]);
+            if(a==p.first)
+            {
+                p.second++;
+            }
+            else if(a>p.first)
+            {
+                p.first=a;
+                p.second=1;
+            }
         }
-        int b=*max_element(v.begin(),v.end());
-        return count(v.begin(),v.end(),b);
+        return p.second;
     }
 };
