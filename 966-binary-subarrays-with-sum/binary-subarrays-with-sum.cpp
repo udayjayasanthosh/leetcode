@@ -6,8 +6,6 @@ public:
         int sum=0;
         int c=0;
         int c1=count(nums.begin(),nums.end(),0);
-        
-        
         if (c1==nums.size() and goal==0)return (c1*(c1+1))/2;
         map<int,int>mpp;
         
