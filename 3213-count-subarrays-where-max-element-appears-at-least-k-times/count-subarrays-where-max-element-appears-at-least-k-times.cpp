@@ -18,7 +18,6 @@ public:
             {
                 s++;
                 s=s+(n-i);
-                // cout<<s+(n-i);
             }
             if(j<n)
             {
@@ -40,10 +39,10 @@ public:
             }
 
         }
-        if(mp[a]==k)
-        {
-            s++;
-        }
+        // if(mp[a]==k)
+        // {
+        //     s++;
+        // }
         return s;
     }
 };
