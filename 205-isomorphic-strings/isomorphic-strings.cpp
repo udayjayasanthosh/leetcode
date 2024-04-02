@@ -3,7 +3,7 @@ public:
     bool isIsomorphic(string s, string t) {
         int a=t.size();
         unordered_map<char,char>mp;
-        unordered_map<char,bool>mp1;
+        unordered_map<char,char>mp1;
         for(int i=0;i<a;i++)
         {
            if(mp.find(s[i])==mp.end())
@@ -14,7 +14,7 @@ public:
                 return false;
             }
             mp[s[i]]=t[i];
-            mp1[t[i]]=true;
+            mp1[t[i]]=s[i];
             // mp[t[i]]=s[i];
            }
            else
