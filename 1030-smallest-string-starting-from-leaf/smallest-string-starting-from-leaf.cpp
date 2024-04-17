@@ -11,14 +11,16 @@
  */
 class Solution {
 public:
-    void fun(TreeNode* root,vector<string>&v,string s)
+    void fun(TreeNode* root,string &v,string s)
     {
         if(root==NULL) return;
         s=(char)(97+root->val)+s;
         if(root->left==NULL and root->right==NULL)
         {
-            v.push_back(s);
-            return;
+            if(v=="")
+            v=s;
+            else if(s<v)
+            v=s;
         }
         if(root->left!=NULL)
         {
@@ -30,9 +32,9 @@ public:
         }
     }
     string smallestFromLeaf(TreeNode* root) {
-        vector<string>v;
+        string v;
         string s="";
         fun(root,v,s);
-        return *min_element(v.begin(),v.end());
+        return v;
     }
 };
