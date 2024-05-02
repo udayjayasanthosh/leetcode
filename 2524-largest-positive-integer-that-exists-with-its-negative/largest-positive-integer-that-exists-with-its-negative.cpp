@@ -8,7 +8,6 @@ public:
         {
             if(nums[i]>0)
             break;
-            else
             mp[nums[i]]='0';
         }
         for(int i=n-1;i>=0;i--)
