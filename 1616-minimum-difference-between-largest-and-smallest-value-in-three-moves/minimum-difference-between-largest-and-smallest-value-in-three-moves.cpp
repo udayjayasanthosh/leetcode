@@ -13,6 +13,8 @@ public:
             {
                 if(i<j)
                 v.push_back((nums[j]-nums[i]));
+                else
+                break;
             }
         }
         int k=0;
@@ -20,9 +22,11 @@ public:
         {
             for(int i=3-k;i>=0;i--)
             {
+                k++;
                 if(j>i)
                 v.push_back(abs(nums[j]-nums[i]));
-                k++;
+                else
+                break;
             }
         }
         return *min_element(v.begin(),v.end());
