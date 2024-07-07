@@ -3,7 +3,7 @@ public:
     void fun(int bottle,int exchange,int &count,int rem)
     {
         count+=bottle;
-        cout<<bottle<<" "<<rem;
+        // cout<<bottle<<" "<<rem;
         if(bottle+rem<exchange)return;
         int r=(bottle+rem)%exchange;
         bottle=(bottle+rem)/exchange;
