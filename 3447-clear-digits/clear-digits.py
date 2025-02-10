@@ -6,20 +6,17 @@ class Solution:
         while(check!=0):
             i=0
             j=1
-            dummmy=0
-            # print(s)
+            dummy=0
             while(j<len(s)):
                 if s[j] in numb:
-                    # print(i,j)
                     s=s[0:i]+s[j+1::]
                     i-=1
                     j-=1
-                    # print(s)
-                    dummmy+=1
+                    dummy+=1
                 else:
                     i+=1
                     j+=1
-            if dummmy==0:
+            if dummy==0:
                 check=0
         return s
 
