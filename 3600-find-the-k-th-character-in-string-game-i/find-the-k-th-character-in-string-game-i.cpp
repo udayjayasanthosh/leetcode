@@ -20,7 +20,7 @@ public:
             word+=a;
             ans+=a;
         }
-        cout<<ans;
+        // cout<<ans;
         return ans[k-1];
     }
 };
