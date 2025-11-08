@@ -4,12 +4,13 @@ public:
         string ans="";
         int W1=word1.size();
         int W2=word2.size();
-        for(int i=0;i<max(W1,W2);i++)
+        int maxi=max(W1,W2);
+        for(int i=0;i<maxi;i++)
         {
             if(i<W1)
-            ans+=word1[i];
+            ans=ans+word1[i];
             if(i<W2)
-            ans+=word2[i];
+            ans=ans+word2[i];
         }
         return ans;
     }
